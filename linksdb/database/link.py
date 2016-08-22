@@ -10,5 +10,5 @@ class Link(Base):
     value = Column(String, unique=True, nullable=False)
 
     tags = relationship(
-        'Tag', secondary=links_tags, back_populates='links'
+        'Tag', secondary=links_tags,
     )
