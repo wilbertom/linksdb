@@ -5,9 +5,9 @@ from linksdb.database.session import session
 
 
 class ModelResource(flask_restful.Resource):
-
     model = None
     fields = {}
+    session = session
 
     def serialize(self, r):
         data = {}
@@ -18,7 +18,7 @@ class ModelResource(flask_restful.Resource):
         return data
 
     def list(self):
-        return session.query(self.model).all()
+        return self.session.query(self.model).all()
 
     def get(self):
 
