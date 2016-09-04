@@ -3,4 +3,20 @@
 {% block content %}
 <h1>Linksdb</h1>
 
+
+<form id="new-link">
+
+    <label for="">Link</label>
+    <input name="link" type="text">
+
+    <label for="">Categories</label>
+    <input name="tags" type="text">
+
+    <button type="submit">Save</button>
+</form>
+
+
+<script src="{{ url_for('static', filename='js/jquery-3.1.0.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 {% endblock %}
